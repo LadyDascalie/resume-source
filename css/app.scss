@@ -5,57 +5,60 @@
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,300,600);
 
 
-
 /**
- Mixins
- ======
- **/
- @mixin no-outlines() {
+Mixins
+======
+**/
+
+// Disable browser selection outlines
+@mixin no-outlines() {
   outline-color: transparent;
   outline-style: none;
 }
 
-/**
- Font vars
- =========
- **/
- $sansita: "Sansita One", cursive;
- $opensans: "Open-Sans", Helvetica, sans-serif;
-
-/** 
- Color vars
- ==========
- **/
-
- $deepPurple: #742F4C;
- $mintyGreen: #B1D6BD;
- $bakedYellow: #EFF1DB;
- $lightOrange: #F7A374;
- $deepBlack: #0B0C0E;
- $transBlack: rgba(11, 12, 14, 0.9);
- $eggShell: #9C9886;
+// Font mixins
+@mixin sansita() {
+  font-family: "Sansita One", cursive;
+}
+@mixin open-sans() {
+  font-family: "Open-Sans", Helvetica, sans-serif;
+}
 
 
 /**
- Base styles 
- ============
- **/
- body {
-  font-family: $opensans;
+Color vars
+==========
+**/
+
+$deepPurple: #742F4C;
+$mintyGreen: #B1D6BD;
+$bakedYellow: #EFF1DB;
+$lightOrange: #F7A374;
+$deepBlack: #0B0C0E;
+$transBlack: rgba(11, 12, 14, 0.9);
+$eggShell: #9C9886;
+
+
+/**
+Base styles
+============
+**/
+body {
+  @include open-sans
   background-color: $transBlack;
   color:$eggShell;
 }
-h1,h2,h3,h4,h5,h6 {font-family: $sansita;}
+h1,h2,h3,h4,h5,h6 {@include sansita();}
 h1 {color: $lightOrange;}
 h3 {color: $deepPurple;}
-section,article,p {font-family: $opensans;}
+section,article,p {@include open-sans();}
 i {color: $mintyGreen;}
 
 /**
- Backgrounds
- ===========
- **/
- .night-bg {
+Backgrounds
+===========
+**/
+.night-bg {
   background: url('../img/night.jpg');
   background-size: cover;
   background-repeat: no-repeat;
@@ -73,11 +76,11 @@ i {color: $mintyGreen;}
 }
 
 /**
- Navigation
- ==========
- **/
- .navbar-default .navbar-nav > li > a {
-  font-family: $sansita;
+Navigation
+==========
+**/
+.navbar-default .navbar-nav > li > a {
+  @include sansita();
   color: $lightOrange;
   // margin:0 20px;
   vertical-align:middle;
@@ -109,7 +112,7 @@ ul.navbar-nav {
   z-index: 1;
 }
 .navbar-default, .navbar-collapse {
-  text-align: center; 
+  text-align: center;
 }
 
 .navbar-collapse {
@@ -130,19 +133,19 @@ ul.navbar-nav {
 }
 
 /**
- Header styles
- **/
- .name, .title, .additional {
+Header styles
+**/
+.name, .title, .additional {
   @include no-outlines();
 }
 .name {
-  font-family: $sansita;
+  @include sansita();
   font-size: 54px;
   color: $mintyGreen;
-  
+
 }
 .title {
-  font-family: $opensans;
+  @include open-sans();
   font-size: 24px;
   color: $mintyGreen;
 }
@@ -160,22 +163,21 @@ ul.navbar-nav {
 }
 
 /**
- Generic styles
- **/
-  
- .hidden-all {
+Generic styles
+**/
+
+.hidden-all {
   display: none!important;
- }
-
- address,
- time {
-  color:$lightOrange;
-  margin: 0;
 }
-time {margin-bottom: 30px;}
 
-strong {
-  // color: white;
+address,
+time {
+  color:$lightOrange;
+}
+address {margin: 0;}
+time {
+  margin-bottom: 15px;
+  display: block;
 }
 
 #self-learn-table {
@@ -193,7 +195,7 @@ th {
 .odd {
   padding: 5px;
   border: 1px solid $deepPurple;
-  }
+}
 .even {
   padding: 5px;
   background-color: rgba(0,0,0,0.1);
@@ -213,8 +215,8 @@ th {
 }
 
 .thanks {
-  font-family: $sansita;
-color: $lightOrange;
+  @include sansita();
+  color: $lightOrange;
 }
 
 #pre-form {
@@ -272,10 +274,10 @@ form.contact-form {
 }
 
 /**
- Media query overrides
- =====================
- **/
- @media (max-width: 767px) {
+Media query overrides
+=====================
+**/
+@media (max-width: 767px) {
   .container-fluid > .navbar-collapse {
     margin: 0;
   }
