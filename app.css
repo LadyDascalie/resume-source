@@ -6358,21 +6358,18 @@ th {
 [name=_gotcha] {
   display: none; }
 
-/**
-Media query overrides
-=====================
-**/
 @media (max-width: 767px) {
   .container-fluid > .navbar-collapse {
     margin: 0; }
   .navbar-collapse {
+    background-color: #0b0c0e;
     border-color: #b1d6bd;
-    position: absolute;
+    float: none;
     left: 50%;
+    position: absolute;
     -webkit-transform: translateX(-50%);
     transform: translateX(-50%);
-    background-color: #0b0c0e;
-    float: none;
     width: 100%; }
-  th, tr {
+  th,
+  tr {
     font-size: .9em; } }
