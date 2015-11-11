@@ -6194,7 +6194,6 @@ a i {
 .navbar-collapse.collapse,
 .navbar-collapse.collapsing,
 .navbar-collapse.collapse.in {
-  height: 56px;
   padding: 0; }
 
 .override-collapse.navbar-collapse.collapsing {
