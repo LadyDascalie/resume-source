@@ -60,7 +60,10 @@ p {@include open-sans();}
 
 i {color: $minty-green;}
 
-a i {color: $link-color;}
+a i {
+  @include no-outlines();
+  color: $link-color;
+}
 
 // Backgrounds
 .night-bg {
