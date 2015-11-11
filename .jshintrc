@@ -7,7 +7,8 @@
     "after"      : false,
     "afterEach"  : false,
     "window"     : true,
-    "$"          : true
+    "$"          : true,
+    "toggleDropdown": true
   },
   "camelcase": true,
   "curly": true,
