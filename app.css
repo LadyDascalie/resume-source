@@ -6194,7 +6194,11 @@ a i {
 .navbar-collapse.collapse,
 .navbar-collapse.collapsing,
 .navbar-collapse.collapse.in {
+  height: 56px;
   padding: 0; }
+
+.override-collapse.navbar-collapse.collapsing {
+  min-height: 56px; }
 
 .navbar-default.nav-exterior,
 .navbar-default.nav-exterior.transparent-header {
@@ -6211,8 +6215,10 @@ a i {
     vertical-align: middle; }
   .navbar-default.nav-exterior .nav-link:hover,
   .navbar-default.nav-exterior .nav-link:focus,
+  .navbar-default.nav-exterior .nav-link:visited,
   .navbar-default.nav-exterior.transparent-header .nav-link:hover,
-  .navbar-default.nav-exterior.transparent-header .nav-link:focus {
+  .navbar-default.nav-exterior.transparent-header .nav-link:focus,
+  .navbar-default.nav-exterior.transparent-header .nav-link:visited {
     outline-color: transparent;
     outline-style: none;
     background-color: #742f4c;
@@ -6261,9 +6267,11 @@ a i {
   .navbar-default .navbar-toggle .icon-bar {
     background-color: #f7a374; }
 
-.navbar-default .navbar-toggle:hover {
+.navbar-default .navbar-toggle:hover,
+.navbar-default .navbar-toggle:focus {
   background-color: #f7a374; }
-  .navbar-default .navbar-toggle:hover .icon-bar {
+  .navbar-default .navbar-toggle:hover .icon-bar,
+  .navbar-default .navbar-toggle:focus .icon-bar {
     background-color: #742f4c; }
 
 .name,
@@ -6398,6 +6406,8 @@ th {
 @media (max-width: 767px) {
   .container-fluid > .navbar-collapse {
     margin: 0; }
+  .button-caption {
+    color: #f7a374; }
   .navbar-collapse {
     background-color: #0b0c0e;
     border-color: #b1d6bd;

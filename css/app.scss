@@ -91,9 +91,12 @@ a i {
 
 .navbar-collapse.collapse,
 .navbar-collapse.collapsing,
-.navbar-collapse.collapse.in
- {
+.navbar-collapse.collapse.in {
   padding: 0;
+}
+
+.override-collapse.navbar-collapse.collapsing {
+  min-height: 56px;
 }
 
 
@@ -113,7 +116,8 @@ a i {
   }
 
   .nav-link:hover,
-  .nav-link:focus {
+  .nav-link:focus,
+  .nav-link:visited {
     @include no-outlines();
     background-color: $deep-purple;
     color: $light-orange;
@@ -343,6 +347,15 @@ th {
   .container-fluid > .navbar-collapse {
     margin: 0;
   }
+
+  .button-caption {
+    color: $light-orange;
+  }
+
+  // .navbar-default.nav-exterior,
+  // .navbar-default.nav-exterior.transparent-header {
+  //   background-color: $deep-purple;
+  // }
 
   .navbar-collapse {
     background-color: $deep-black;
