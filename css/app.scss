@@ -84,6 +84,11 @@ a i {
 }
 
 // Navigation
+
+.nav-controller {
+  height: 500px;
+}
+
 .navbar-default,
 .navbar-collapse {
   text-align: center;
@@ -106,6 +111,7 @@ a i {
   background-image: none;
   border: 0;
   box-shadow: none;
+  transition: all ease 500ms;
   z-index: 1;
 
   .main-nav .nav-link {
@@ -215,9 +221,6 @@ a i {
   }
 }
 
-.row.employment {
-  padding-top: 420px; // blaaaaze it
-}
 
 // Generic styles
 .hidden-all {
