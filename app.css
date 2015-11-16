@@ -6172,7 +6172,7 @@ a i {
   color: #337ab7; }
 
 .night-bg {
-  background: url("../img/night.jpg");
+  background: url("../img/night.jpg") fixed;
   background-color: #0b0c0e;
   background-repeat: no-repeat;
   background-size: cover;
@@ -6187,7 +6187,7 @@ a i {
   width: 100%;
   z-index: 0; }
 
-.navbar-controller {
+.nav-controller {
   height: 500px; }
 
 .navbar-default,
@@ -6208,7 +6208,6 @@ a i {
   background-image: none;
   border: 0;
   box-shadow: none;
-  transition: all ease 500ms;
   z-index: 1; }
   .navbar-default.nav-exterior .main-nav .nav-link,
   .navbar-default.nav-exterior.transparent-header .main-nav .nav-link {
@@ -6232,6 +6231,7 @@ a i {
   background-image: none;
   border: 0;
   box-shadow: none;
+  transition: all ease 500ms;
   z-index: 1; }
   .navbar-default.nav-exterior.full-header .main-nav .nav-link {
     font-family: "Sansita One",cursive;

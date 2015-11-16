@@ -7,7 +7,6 @@
 
 // Mixins
 
-
 // Disable browser selection outlines
 @mixin no-outlines() {
   outline-color: transparent;
@@ -67,7 +66,7 @@ a i {
 
 // Backgrounds
 .night-bg {
-  background: url('../img/night.jpg');
+  background: url('../img/night.jpg') fixed;
   background-color: $deep-black;
   background-repeat: no-repeat;
   background-size: cover;
@@ -84,7 +83,6 @@ a i {
 }
 
 // Navigation
-
 .nav-controller {
   height: 500px;
 }
@@ -104,14 +102,12 @@ a i {
   min-height: 56px;
 }
 
-
 .navbar-default.nav-exterior,
 .navbar-default.nav-exterior.transparent-header {
   background-color: transparent;
   background-image: none;
   border: 0;
   box-shadow: none;
-  transition: all ease 500ms;
   z-index: 1;
 
   .main-nav .nav-link {
@@ -135,6 +131,7 @@ a i {
   background-image: none;
   border: 0;
   box-shadow: none;
+  transition: all ease 500ms;
   z-index: 1;
 
   .main-nav .nav-link {
@@ -354,11 +351,6 @@ th {
   .button-caption {
     color: $light-orange;
   }
-
-  // .navbar-default.nav-exterior,
-  // .navbar-default.nav-exterior.transparent-header {
-  //   background-color: $deep-purple;
-  // }
 
   .navbar-collapse {
     background-color: $deep-black;

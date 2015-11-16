@@ -1,3 +1,4 @@
+// jshint ignore:start
 var gulp         = require('gulp');
 var sass         = require('gulp-sass');
 var uglify       = require('gulp-uglify');
@@ -48,13 +49,11 @@ gulp.task('fonts', function() {
 });
 
 // Static Server + watching scss/html files
-// Static server
 gulp.task('browser-sync', function() {
     browserSync.init({
         server: {
             baseDir: "./public"
         },
-      // startPath: "/public"
     });
     gulp.watch("css/*.scss", ['css', 'prefix']);
     gulp.watch(["public/*.html", "public/css/app.css"]).on('change', browserSync.reload);
