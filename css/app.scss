@@ -251,7 +251,10 @@ th {
   font-weight: bold;
 }
 
-.table-header {border-bottom: 1px solid $deep-purple; padding-top: 10px;}
+.table-header {
+  border-bottom: 1px solid $deep-purple;
+  padding-top: 10px;
+}
 
 .odd {
   border: 1px solid $deep-purple;
